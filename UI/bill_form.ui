@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BillWindow</class>
+ <widget class="QMainWindow" name="BillWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1100</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Выставить счет для оплаты</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">#centralwidget { background-color: qlineargradient(spread:pad, x1:0.084, y1:0.329545, x2:0.901, y2:0.551136, stop:0 rgba(221, 255, 199, 255), stop:0.232451 rgba(187, 255, 184, 255), stop:0.680092 rgba(221, 255, 164, 255), stop:1 rgba(145, 255, 161, 255)); }</string>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QWidget" name="widget" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="font">
+          <font>
+           <family>Garamond</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Наименования товаров - каждое с новой строки:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="orders_list">
+         <property name="font">
+          <font>
+           <family>Courier New</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="autoFormatting">
+          <set>QTextEdit::AutoNone</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCommandLinkButton" name="generate_bill_btn">
+         <property name="font">
+          <font>
+           <family>Garamond</family>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 12pt &quot;Garamond&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Сгенерировать счет</string>
+         </property>
+         <property name="shortcut">
+          <string>Shift+Return</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="widget_2" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QTextEdit" name="bill">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="font">
+          <font>
+           <family>Courier New</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="placeholderText">
+          <string>Здесь отобразится готовый текст...</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="copy_btn">
+         <property name="font">
+          <font>
+           <family>Garamond</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(114, 201, 113, 137), stop:0.264151 rgba(116, 234, 105, 211), stop:0.496115 rgba(188, 224, 133, 124), stop:0.778024 rgba(163, 228, 112, 220), stop:1 rgba(214, 255, 152, 182));</string>
+         </property>
+         <property name="text">
+          <string>Скопировать в буфер обмена</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
